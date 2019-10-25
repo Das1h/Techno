@@ -41,23 +41,23 @@ public class TargetManager : MonoBehaviour
     
     void spawnTarget()
     {
-        Debug.Log("calling spawnTarget");
+        Debug.Log("calling spawnTarget");   //呼ばれる
 
         rndNum = rnd.Next(12);
-        Debug.Log(rndNum);
+        Debug.Log(rndNum);  //呼ばれる
         if(tarList[rndNum].activeSelf == false || tarList[rndNum] == null)
         {
             tarList[rndNum].SetActive(true);
             spawnCount++;
 
-            Debug.Log("spawned");
+            Debug.Log("spawned");   //呼ばれない
         }else if(tarList[rndNum].activeSelf == true)
         {
-            Debug.Log("call again");
+            Debug.Log("call again");    //呼ばれない
 
             spawnTarget();
         }
-        Debug.Log("exit if");
+        Debug.Log("exit if");   //呼ばれない
     }
 
     //湧き周期
