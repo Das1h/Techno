@@ -27,18 +27,10 @@ public class Ranking : MonoBehaviour
         //intへ
         int[] intScores = scores.Select(int.Parse).ToArray();
 
-        //ソート
+        //降順ソート
         Array.Sort(intScores, (a, b) => b -a);
 
         
-
-        foreach (int i in intScores)
-        {
-            Debug.Log(i);
-        }
-
-
-
         int[] rankArray = new int[rankSize];
 
         if(rankSize > intScores.Length)
@@ -55,14 +47,11 @@ public class Ranking : MonoBehaviour
                 rankArray[i] = intScores[i];
             }
         }
-        
-
-        //Array.Reverse(rankArray);
 
         //配列を1つのテキストに
         string rankingText = string.Join("\n", rankArray);
 
-        Debug.Log(rankingText);
+        //Debug.Log(rankingText);
 
         //表示
         GetComponent<Text>().text = rankingText;
