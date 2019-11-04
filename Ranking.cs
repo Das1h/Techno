@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class Ranking : MonoBehaviour
 {
     private int rankSize = 10;
-    private string path = "./GunShooting_Data/Score.txt";
-    //private string path = "./Assets/Scripts/Score/Score.txt";
+    private string path = "./GunShooting_Data/Score.txt";       //ビルドした時用
+    //private string path = "./Assets/Scripts/Score/Score.txt"; //Editorの時用
 
     private void OnEnable()
     {
